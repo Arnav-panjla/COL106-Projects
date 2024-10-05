@@ -8,8 +8,8 @@ class Color(Enum):
     
 
 class Object:
-    def __init__(self, object_id, size, color):
+    def __init__(self, object_id, size, color, storedBinID=None):
         self.ID = object_id 
         self.size = size         
         self.color = color
-        self.storedBinID = None
+        self.storedBinID = storedBinID

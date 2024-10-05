@@ -68,7 +68,7 @@ class AVLTree:
         elif comp > 0:
             root.right = self._insert(root.right, node)
         else:
-            return root  # Duplicate nodes are not allowed
+            return root
 
         self.update_height(root)
 
@@ -174,9 +174,7 @@ class AVLTree:
             self._inorder_traversal(node.right, result)
 
     def find_max_node(self):
-        """
-        Finds the node with the maximum value in the AVL tree.
-        """
+
         if not self.root:
             return None
         return self._find_max_node(self.root)
@@ -187,9 +185,7 @@ class AVLTree:
         return node
 
     def find_min_node(self):
-        """
-        Finds the node with the minimum value in the AVL tree.
-        """
+
         if not self.root:
             return None
         return self._find_min_node(self.root)
@@ -200,9 +196,7 @@ class AVLTree:
         return node
 
     def find_ceiling(self, target_node):
-        """
-        Finds the smallest node greater than or equal to the target node.
-        """
+
         return self._find_ceiling(self.root, target_node)
 
     def _find_ceiling(self, node, target_node):
