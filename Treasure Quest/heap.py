@@ -1,75 +1,51 @@
-'''
-Python Code to implement a heap with general comparison function
-'''
-
 class Heap:
     '''
     Class to implement a heap with general comparison function
     '''
-    
     def __init__(self, comparison_function, init_array):
-        '''
-        Arguments:
-            comparison_function : function : A function that takes in two arguments and returns a boolean value
-            init_array : List[Any] : The initial array to be inserted into the heap
-        Returns:
-            None
-        Description:
-            Initializes a heap with a comparison function
-            Details of Comparison Function:
-                The comparison function should take in two arguments and return a boolean value
-                If the comparison function returns True, it means that the first argument is to be considered smaller than the second argument
-                If the comparison function returns False, it means that the first argument is to be considered greater than or equal to the second argument
-        Time Complexity:
-            O(n) where n is the number of elements in init_array
-        '''
-        
-        # Write your code here
-        pass
-        
+        self.comparison_function = comparison_function
+        self.heap = init_array
+        self.build_heap()
+
+    def build_heap(self):
+        for i in range(len(self.heap) // 2 - 1, -1, -1):
+            self.downheap(i)
+
     def insert(self, value):
-        '''
-        Arguments:
-            value : Any : The value to be inserted into the heap
-        Returns:
-            None
-        Description:
-            Inserts a value into the heap
-        Time Complexity:
-            O(log(n)) where n is the number of elements currently in the heap
-        '''
-        
-        # Write your code here
-        pass
-    
+        self.heap.append(value)
+        self.upheap(len(self.heap) - 1)
+
     def extract(self):
-        '''
-        Arguments:
-            None
-        Returns:
-            Any : The value extracted from the top of heap
-        Description:
-            Extracts the value from the top of heap, i.e. removes it from heap
-        Time Complexity:
-            O(log(n)) where n is the number of elements currently in the heap
-        '''
+        if not self.heap:
+            return None
+        if len(self.heap) == 1:
+            return self.heap.pop()
         
-        # Write your code here
-        pass
-    
+        min_val = self.heap[0]
+        self.heap[0] = self.heap.pop()
+        self.downheap(0)
+        return min_val
+
     def top(self):
-        '''
-        Arguments:
-            None
-        Returns:
-            Any : The value at the top of heap
-        Description:
-            Returns the value at the top of heap
-        Time Complexity:
-            O(1)
-        '''
-        
-        # Write your code here
-        pass
-    
-    # You can add more functions if you want to
+        return self.heap[0] if self.heap else None
+
+    def upheap(self, index):
+        parent = (index - 1) // 2
+        while index > 0 and self.comparison_function(self.heap[index], self.heap[parent]):
+            self.heap[index], self.heap[parent] = self.heap[parent], self.heap[index]
+            index = parent
+            parent = (index - 1) // 2
+
+    def downheap(self, index):
+        min_index = index
+        left = 2 * index + 1
+        right = 2 * index + 2
+
+        if left < len(self.heap) and self.comparison_function(self.heap[left], self.heap[min_index]):
+            min_index = left
+        if right < len(self.heap) and self.comparison_function(self.heap[right], self.heap[min_index]):
+            min_index = right
+
+        if min_index != index:
+            self.heap[index], self.heap[min_index] = self.heap[min_index], self.heap[index]
+            self.downheap(min_index)  

@@ -2,12 +2,15 @@
     Python file to implement the class CrewMate
 '''
 
+
+
 class CrewMate:
     '''
     Class to implement a crewmate
     '''
     
     def __init__(self):
+
         '''
         Arguments:
             None
@@ -16,6 +19,9 @@ class CrewMate:
         Description:
             Initializes the crewmate
         '''
+        
+        self.load = 0
+        self.treasures = []
         
         # Write your code here
         pass
