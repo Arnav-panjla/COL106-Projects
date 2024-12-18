@@ -35,21 +35,36 @@ COL106-Projects/
 
 ```
 
-## Mini Projects Overview 📄
 
-### Project 1 📝
-<!-- Description for Project 1 goes here -->
+## Projects Overview 📄
 
-### Project 2 📝
-<!-- Description for Project 2 goes here -->
+### 1. **PacMan Maze Game 🟩**
+Engineered a **PacMan** maze game from scratch using **Stack ADT**, focusing on achieving optimal time complexity for gameplay logic and movement. 🎮
 
-### Project 3 📝
-<!-- Description for Project 3 goes here -->
+### 2. **Cargo Management System 📦**
+Designed a **Cargo Management System** using **AVL Tree ADT** to efficiently manage and allocate storage, optimizing operations in logarithmic time. 🚚
 
-### Project 4 📝
-<!-- Description for Project 4 goes here -->
+### 3. **Library Management System 📚**
+Developed a custom **Library Management System** with **Hashmaps**, enabling efficient storage, quick lookups, and fast navigation for book and user management. 📖
+
+### 4. **Straw Hat Crew Logic ⚔️**
+Implemented custom **Straw Hat Crew** logic using **Heaps** to efficiently allocate treasures, ensuring optimal time complexity for treasure distribution. 💰
+
+### 5. **Flight Planner ✈️**
+Created a **Flight Planner** using **Graphs** to optimize flight routes based on time, price, and number of interchanges, ensuring the shortest and most efficient path in polynomial time. 🌍
+
 
 ## Important Notes ⚠️
+- To run the test case 
+    - For P1, P2, P3 & P5
+    ```bash
+    python3 main.py
+    ```
+    - Incase of P4
+    ```bash
+    python3 maindynamic.py
+    python3 mainstatichash.py
+    ```
 - The `main.py` folder is not authored by me; it is a collection of test cases provided by my friends. 🤝
 - Each project folder contains the problem statement in PDF format along with my solution code. 📖💻
 
