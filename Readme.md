@@ -1,30 +1,36 @@
-# COL106 Mini Projects Repository 📚✨
+# COL106 Projects Repository 📚✨
 
 Welcome to my repository for the COL106 course at IIT Delhi. This repo contains all my assignments in form of mini projects for the course, focusing on solving problems efficiently within given time and space complexity constraints.
 
 ## Repository Structure 🗂️
 ```bash 
-COL106-Mini-Projects/
-├── Project1/
-│   ├── problem_statement.pdf
-│   ├── solution_code.py
+COL106-Projects/
+├── P1 PacMan/
+│   ├── problem_statement_1.pdf
+│   ├── solution codes
+|   ├── main.py
 │   └── README.md
-├── Project2/
-│   ├── problem_statement.pdf
-│   ├── solution_code.py
+├── P2 Cargo Management System/
+│   ├── problem_statement_2.pdf
+│   ├── solution codes
+|   ├── main.py
 │   └── README.md
-├── Project3/
-│   ├── problem_statement.pdf
-│   ├── solution_code.py
+├── P3 Treasure Quest/
+│   ├── problem_statement_3.pdf
+│   ├── solution codes
+|   ├── main.py
 │   └── README.md
-├── Project4/
-│   ├── problem_statement.pdf
-│   ├── solution_code.py
+├── P4 Library Digitalisation/
+│   ├── problem_statement_4.pdf
+│   ├── solution codes
+|   ├── maindynamic.py
+|   ├── mainstatichash.py
 │   └── README.md
-├── someTestCases/
-│   ├── test_case_1.py
-│   ├── test_case_2.py
-│   └── ...
+├── P5 Flight Planner/
+│   ├── problem_statement_5.pdf
+│   ├── solution codes
+|   ├── main.py
+│   └── README.md
 └── README.md
 
 ```
@@ -44,7 +50,7 @@ COL106-Mini-Projects/
 <!-- Description for Project 4 goes here -->
 
 ## Important Notes ⚠️
-- The `someTestCases` folder is not authored by me; it is a collection of test cases provided by my friends. 🤝
+- The `main.py` folder is not authored by me; it is a collection of test cases provided by my friends. 🤝
 - Each project folder contains the problem statement in PDF format along with my solution code. 📖💻
 
 Feel free to explore the projects and their respective solutions. If you have any questions, feel free to reach out! 😊
