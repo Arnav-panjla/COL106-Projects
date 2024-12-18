@@ -119,7 +119,7 @@ class StupidHeap:
 def main(n=10**3, m=20):
     format_len = 25
     workers = m
-    print("[+] Welcome to Ani's Testcase (V3.0) [still in development, this tc is not complete], this will be a comprehensive testcase and will automatically check for correctness.\n[*] Do not rely on the correctness checker for time complexity, rely purely on the time complexity tables given ahead\n[!] Unlike last time, this testcase will strictly adhere to possible operations, any errors indicate an issue in your code.\n[!] If you think that there is an error in the testcase or if I'm missing something, dm me whatsapp pr")
+    print("[+] Welcome to Testcase (V3.0) [still in development, this tc is not complete], this will be a comprehensive testcase and will automatically check for correctness.\n[*] Do not rely on the correctness checker for time complexity, rely purely on the time complexity tables given ahead\n[!] Unlike last time, this testcase will strictly adhere to possible operations, any errors indicate an issue in your code.\n[!] If you think that there is an error in the testcase or if I'm missing something, dm me whatsapp pr")
     stupid_heap = StupidHeap(lambda x: x, [1, 2, 3, 4, 5])
     test_heap = Heap(lambda x, y: x < y, [1, 2, 3, 4, 5])
     for i in progress_bar(range(n), "Random Heap Operations".ljust(format_len)):
